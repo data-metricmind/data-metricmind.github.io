@@ -486,49 +486,16 @@ footer a:hover{color:var(--ink)}
 <!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-title">
   <div class="contact-glow" aria-hidden="true"></div>
-  <div class="contact-inner">
+  <div class="contact-inner" style="grid-template-columns:1fr;max-width:620px">
     <div class="contact-left">
       <span class="label">Parler de votre projet</span>
       <h2 class="contact-title" id="contact-title">Prêt à voir où se cache<br><em>votre performance ?</em></h2>
-      <p class="contact-sub">Décrivez-moi votre situation en quelques mots. Je vous réponds personnellement sous 24h pour identifier ensemble si — et comment — je peux vous aider.</p>
+      <p class="contact-sub">Réservez un créneau de 30 minutes — gratuit, sans engagement. On échange sur votre situation et je vous dis honnêtement si je peux vous aider.</p>
+      <div style="margin-top:2rem"><a href="https://calendly.com/data-metricmind/30min" target="_blank" rel="noopener" class="btn-p">Réserver un créneau de 30 min →</a></div>
       <div class="contact-detail">
         <a href="mailto:contact@metricmind.fr" aria-label="Envoyer un email à Metricmind">✉ contact@metricmind.fr</a>
-        <a href="https://calendly.com/VOTRE_LIEN/30min" target="_blank" rel="noopener" aria-label="Réserver un créneau de 30 minutes">📅 Réserver 30 min — gratuit</a>
-        <a href="https://linkedin.com/in/malick" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Malick">↗ LinkedIn — Malick</a>
+        <a href="https://www.linkedin.com/in/malick-ba-a3a88337/" target="_blank" rel="noopener" aria-label="Profil LinkedIn de Malick">↗ LinkedIn — Malick</a>
       </div>
-    </div>
-    <div>
-      <form class="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate aria-label="Formulaire de contact">
-        <div class="form-group">
-          <label for="fname">Prénom</label>
-          <input type="text" id="fname" name="fname" placeholder="Votre prénom" required autocomplete="given-name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email professionnel</label>
-          <input type="email" id="email" name="email" placeholder="vous@entreprise.com" required autocomplete="email">
-        </div>
-        <div class="form-group">
-          <label for="sujet">Votre enjeu principal</label>
-          <select id="sujet" name="sujet" required>
-            <option value="" disabled selected>Choisissez un sujet</option>
-            <option>Diagnostic de performance</option>
-            <option>Tracking & collecte de données</option>
-            <option>Server-side</option>
-            <option>Optimisation & CRO</option>
-            <option>Dashboarding & pilotage</option>
-            <option>Autre</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="situation">Votre situation en quelques mots</label>
-          <textarea id="situation" name="situation" rows="3" placeholder="Ex : Nos données sont incomplètes depuis le déploiement du CMP, et nous ne savons pas d'où vient la perte..." required></textarea>
-        </div>
-        <p class="form-note" id="form-note">Réponse personnelle garantie sous 24h.</p>
-        <button type="submit" class="btn-p" aria-describedby="form-note">Envoyer ma situation →</button>
-        <div class="form-success" id="form-success" role="alert" aria-live="polite">
-          <strong>Message reçu !</strong> Je vous réponds sous 24h.
-        </div>
-      </form>
     </div>
   </div>
 </section>
