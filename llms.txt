@@ -1,0 +1,23 @@
+# Metricmind
+
+> Metricmind est le cabinet de Malick Ba, consultant senior Data & Performance depuis 2008 (Bois-Colombes, France). Il aide les PME à mesurer correctement leurs conversions : du clic publicitaire jusqu'au lead ou à la vente, en passant par le tracking, le bandeau cookies (Consent Mode v2) et le CRM.
+
+Offres pour les PME, en trois étapes :
+
+1. Scan Trackmap (gratuit) : cartographie des outils de mesure et de publicité qui se déclenchent sur un site, avant choix, après refus et après acceptation du bandeau cookies, restituée en 30 minutes.
+2. Audit mesure & conversions (prix fixe) : localisation des conversions perdues ou mal attribuées (GA4, GTM, Google Ads, Meta, LinkedIn, CRM) et pilotage des corrections avec l'agence ou l'équipe du client.
+3. Formation & autonomie : formation des équipes marketing à GA4, Looker Studio et Google Tag Manager sur leurs propres données.
+En option : accompagnement continu, rôle de référent data à temps partagé.
+
+Expertise : Google Analytics 4, Google Tag Manager, tracking server-side (sGTM, Addingwell, Stape), Consent Mode v2, Adobe Analytics, Piano Analytics, BigQuery, dbt, Looker Studio, Optimizely, Microsoft Clarity.
+
+Résultats représentatifs : +15 % de conversions visibles grâce au server-side pour un e-commerce présent dans 10 pays ; migration Adobe Analytics déployée dans 40 pays.
+
+## Pages
+
+- [Accueil](https://metricmind.fr/) : positionnement et résumé des offres
+- [Offres](https://metricmind.fr/offres) : détail des offres PME et questions fréquentes
+- [Trackmap](https://metricmind.fr/trackmap) : la plateforme de scan, ce qu'elle détecte, pour qui
+- [Cas clients](https://metricmind.fr/cas-clients) : études de cas et témoignages
+- [À propos](https://metricmind.fr/a-propos) : parcours de Malick Ba et outils maîtrisés
+- [Contact](https://metricmind.fr/contact) : formulaire et prise de rendez-vous (contact@metricmind.fr)

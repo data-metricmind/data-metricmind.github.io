@@ -13,10 +13,10 @@ SITE = 'https://metricmind.fr'
 TRACKING = R('head_tracking.html')
 LOGO = R('nav_logo.html')
 
-JSONLD = '''<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Metricmind","url":"https://metricmind.fr/","email":"contact@metricmind.fr","description":"Audit de la mesure des conversions, scan Trackmap et formation GA4 pour les PME.","areaServed":"FR","address":{"@type":"PostalAddress","addressLocality":"Bois-Colombes","postalCode":"92270","addressCountry":"FR"},"founder":{"@type":"Person","name":"Malick","jobTitle":"Consultant senior Data & Performance","sameAs":["https://www.linkedin.com/in/malick-ba-a3a88337/"]}}
-</script>
-'''
+JSONLD = '<script type="application/ld+json">\n{"@context": "https://schema.org", "@type": "ProfessionalService", "@id": "https://metricmind.fr/#org", "name": "Metricmind", "url": "https://metricmind.fr/", "logo": "https://metricmind.fr/icon-512.png", "email": "contact@metricmind.fr", "description": "Metricmind aide les PME à mesurer correctement leurs conversions : scan Trackmap gratuit, audit mesure & conversions, formation GA4 et Looker Studio, accompagnement data.", "areaServed": {"@type": "Country", "name": "France"}, "address": {"@type": "PostalAddress", "addressLocality": "Bois-Colombes", "postalCode": "92270", "addressCountry": "FR"}, "founder": {"@id": "https://metricmind.fr/a-propos#malick"}, "knowsAbout": ["Google Analytics 4", "Google Tag Manager", "Tracking server-side", "Consent Mode v2", "Mesure des conversions", "Looker Studio", "Adobe Analytics", "Piano Analytics", "BigQuery", "CRO"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Offres Metricmind pour les PME", "itemListElement": [{"@type": "Offer", "name": "Scan Trackmap", "price": "0", "priceCurrency": "EUR", "url": "https://metricmind.fr/trackmap", "itemOffered": {"@type": "Service", "name": "Scan Trackmap", "description": "Cartographie des outils de mesure et de publicité d\'un site, avant et après le bandeau cookies, restituée en 30 minutes."}}, {"@type": "Offer", "name": "Audit mesure & conversions", "url": "https://metricmind.fr/offres", "itemOffered": {"@type": "Service", "name": "Audit mesure & conversions", "description": "Vérification de la mesure du clic publicitaire jusqu\'au lead ou à la vente, localisation des conversions perdues et pilotage des corrections."}}, {"@type": "Offer", "name": "Formation & autonomie", "url": "https://metricmind.fr/offres", "itemOffered": {"@type": "Service", "name": "Formation GA4, Looker Studio et GTM", "description": "Formation des équipes marketing sur leurs propres données pour être autonomes sur leurs rapports."}}, {"@type": "Offer", "name": "Accompagnement continu", "url": "https://metricmind.fr/offres", "itemOffered": {"@type": "Service", "name": "Référent data à temps partagé"}}]}}\n</script>\n'
+PERSON_LD = '<script type="application/ld+json">\n{"@context": "https://schema.org", "@type": "Person", "@id": "https://metricmind.fr/a-propos#malick", "name": "Malick Ba", "jobTitle": "Consultant senior Data & Performance", "worksFor": {"@id": "https://metricmind.fr/#org"}, "url": "https://metricmind.fr/a-propos", "sameAs": ["https://www.linkedin.com/in/malick-ba-a3a88337/"], "knowsAbout": ["Google Analytics 4", "Adobe Analytics", "Piano Analytics", "Google Tag Manager", "Tracking server-side", "BigQuery", "dbt", "Optimizely", "Microsoft Clarity"]}\n</script>\n'
+FAQ_LD = '<script type="application/ld+json">\n{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Qu\'est-ce qu\'un audit de la mesure des conversions ?", "acceptedAnswer": {"@type": "Answer", "text": "C\'est la vérification, étape par étape, que vos conversions sont correctement mesurées : du clic sur une publicité Google, Meta ou LinkedIn jusqu\'au formulaire, au panier ou au CRM. L\'objectif est de localiser les conversions perdues ou mal attribuées et de dire ce qu\'elles vous coûtent."}}, {"@type": "Question", "name": "Comment savoir si mon site perd des conversions dans la mesure ?", "acceptedAnswer": {"@type": "Answer", "text": "Les signes habituels : des écarts entre GA4, vos plateformes publicitaires et votre CRM, une baisse des données depuis l\'installation du bandeau cookies, ou des campagnes dont personne ne sait dire lesquelles rapportent. Le scan Trackmap gratuit permet de le vérifier rapidement."}}, {"@type": "Question", "name": "Faut-il me donner des accès à mes outils ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas pour le scan Trackmap, qui analyse ce que votre site envoie publiquement. Pour l\'audit complet, un accès en lecture à GA4, Google Tag Manager et vos plateformes publicitaires est nécessaire."}}, {"@type": "Question", "name": "Travaillez-vous avec notre agence ou notre intégrateur ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Je fournis un plan de corrections priorisé, avec qui fait quoi, et je pilote les corrections avec votre agence, votre intégrateur ou votre équipe interne, puis je vérifie que tout fonctionne."}}, {"@type": "Question", "name": "Sur quels outils portent les formations ?", "acceptedAnswer": {"@type": "Answer", "text": "Principalement Google Analytics 4, Looker Studio et Google Tag Manager, sur vos propres comptes et vos propres données. J\'interviens aussi sur Adobe Analytics et Piano Analytics."}}, {"@type": "Question", "name": "Combien coûte l\'audit ?", "acceptedAnswer": {"@type": "Answer", "text": "L\'audit est vendu à prix fixe, annoncé avant de commencer. Il dépend de la taille du site et du nombre d\'outils ; le scan Trackmap gratuit permet d\'en cadrer le périmètre."}}]}\n</script>\n'
+FAQ_HTML = '<section id="faq" aria-labelledby="faq-title">\n  <span class="label">Questions fréquentes</span>\n  <h2 id="faq-title">Avant de se lancer</h2>\n  <div class="faq">\n    <details><summary>Qu\'est-ce qu\'un audit de la mesure des conversions ?</summary><p>C\'est la vérification, étape par étape, que vos conversions sont correctement mesurées : du clic sur une publicité Google, Meta ou LinkedIn jusqu\'au formulaire, au panier ou au CRM. L\'objectif est de localiser les conversions perdues ou mal attribuées et de dire ce qu\'elles vous coûtent.</p></details>\n    <details><summary>Comment savoir si mon site perd des conversions dans la mesure ?</summary><p>Les signes habituels : des écarts entre GA4, vos plateformes publicitaires et votre CRM, une baisse des données depuis l\'installation du bandeau cookies, ou des campagnes dont personne ne sait dire lesquelles rapportent. Le scan Trackmap gratuit permet de le vérifier rapidement.</p></details>\n    <details><summary>Faut-il me donner des accès à mes outils ?</summary><p>Pas pour le scan Trackmap, qui analyse ce que votre site envoie publiquement. Pour l\'audit complet, un accès en lecture à GA4, Google Tag Manager et vos plateformes publicitaires est nécessaire.</p></details>\n    <details><summary>Travaillez-vous avec notre agence ou notre intégrateur ?</summary><p>Oui. Je fournis un plan de corrections priorisé, avec qui fait quoi, et je pilote les corrections avec votre agence, votre intégrateur ou votre équipe interne, puis je vérifie que tout fonctionne.</p></details>\n    <details><summary>Sur quels outils portent les formations ?</summary><p>Principalement Google Analytics 4, Looker Studio et Google Tag Manager, sur vos propres comptes et vos propres données. J\'interviens aussi sur Adobe Analytics et Piano Analytics.</p></details>\n    <details><summary>Combien coûte l\'audit ?</summary><p>L\'audit est vendu à prix fixe, annoncé avant de commencer. Il dépend de la taille du site et du nombre d\'outils ; le scan Trackmap gratuit permet d\'en cadrer le périmètre.</p></details>\n  </div>\n</section>\n'
 
 NAV_ITEMS = [('/offres', 'Offres'), ('/trackmap', 'Trackmap'), ('/cas-clients', 'Cas clients'), ('/a-propos', 'À propos')]
 
@@ -31,7 +31,9 @@ def head(title, desc, path, extra=''):
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{url}">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#080808">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -130,7 +132,7 @@ offres = offres.replace('<span class="label">Offres</span>\n  <h2 id="offres-tit
 
 # ---------- Pages ----------
 page('index.html',
-     'Metricmind — Votre site perd des conversions. Je vous montre où.',
+     'Metricmind — Mesure des conversions pour les PME : votre site perd des conversions, je vous montre où',
      'Metricmind aide les PME à mesurer correctement leurs conversions : scan gratuit Trackmap, audit mesure & conversions, formation GA4 et Looker Studio.',
      '/',
      S('hero') + '\n' + S('problem') + '\n' + HOME_OFFRES + '\n' + HOME_PROOF + '\n' + S('temoignages') + '\n' +
@@ -141,10 +143,11 @@ page('offres.html',
      'Offres — Scan, audit mesure & conversions, formation | Metricmind',
      'Scan Trackmap gratuit, audit mesure & conversions à prix fixe, formation GA4 et Looker Studio, accompagnement continu : les offres Metricmind pour les PME.',
      '/offres',
-     page_head('Offres', 'Trois étapes pour reprendre la main sur vos conversions',
-               "On commence par un état des lieux gratuit. Ensuite, on corrige ce qui fuit. Enfin, votre équipe apprend à s'en servir seule.") +
-     '\n' + offres + '\n' + S('expertises') + '\n' +
-     cta_band('Vous ne savez pas par où <em>commencer ?</em>', 'Commencez par le scan gratuit : on saura en 30 minutes ce qui mérite votre attention.', 'offres_cta'))
+     page_head('Offres PME', 'Trois étapes pour reprendre la main sur vos conversions',
+               "Des offres pensées pour les PME qui investissent en acquisition. On commence par un état des lieux gratuit, on corrige ce qui fuit, puis votre équipe apprend à s'en servir seule.") +
+     '\n' + offres + '\n' + S('expertises') + '\n' + FAQ_HTML + '\n' +
+     cta_band('Vous ne savez pas par où <em>commencer ?</em>', 'Commencez par le scan gratuit : on saura en 30 minutes ce qui mérite votre attention.', 'offres_cta'),
+     extra_head=FAQ_LD)
 
 page('cas-clients.html',
      'Études de cas & témoignages | Metricmind',
@@ -162,7 +165,8 @@ page('a-propos.html',
      page_head('À propos', 'Quinze ans à faire parler les données, côté agence et côté annonceur',
                'Je suis Malick, consultant senior Data & Performance. Avec Metricmind, j’aide les PME à mesurer correctement ce qui compte, et à s’en servir pour décider.') +
      '\n' + S('about').replace('<span class="label">À propos</span>\n','') + '\n' + S('logos') + '\n' + S('outils') + '\n' +
-     cta_band('Envie d’en <em>parler ?</em>', 'Un échange de 30 minutes, gratuit et sans engagement.', 'apropos_cta'))
+     cta_band('Envie d’en <em>parler ?</em>', 'Un échange de 30 minutes, gratuit et sans engagement.', 'apropos_cta'),
+     extra_head=PERSON_LD)
 
 page('contact.html',
      'Contact — Parlons de votre situation | Metricmind',
@@ -173,7 +177,9 @@ page('contact.html',
 # ---------- Trackmap : contenu propre, chrome commun ----------
 tm = open(os.path.join(SRC, 'trackmap_body.html'), encoding='utf-8').read()
 tm_css = open(os.path.join(SRC, 'trackmap.css'), encoding='utf-8').read()
+tm_faq = re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', tm, flags=re.S)
+TM_LD = '<script type="application/ld+json">\n' + __import__('json').dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":re.sub('<[^>]+>','',r)}} for q,r in tm_faq]}, ensure_ascii=False) + '\n</script>\n'
 page('trackmap.html',
      'Trackmap — ce qui tourne vraiment sur votre site | Metricmind',
      'Trackmap cartographie tous les outils de mesure, publicité et marketing qui se déclenchent sur votre site, avant et après le bandeau cookies, et détecte les anomalies RGPD.',
-     '/trackmap', tm, page_style=tm_css)
+     '/trackmap', tm, page_style=tm_css, extra_head=TM_LD)
