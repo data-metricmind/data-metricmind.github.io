@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Malick, Consultant Data & Performance | Metricmind</title>
-<meta name="description" content="Metricmind : conseil data senior pour les équipes digitales. Diagnostic, cadrage, pilotage de projets analytics — du tracking au server-side.">
+<meta name="description" content="Metricmind aide les PME à mesurer correctement leurs conversions : scan gratuit Trackmap, audit mesure & conversions, formation GA4 et Looker Studio.">
 <link rel="canonical" href="https://metricmind.fr/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#080808">
@@ -181,7 +181,7 @@ h1 em{font-style:italic;color:var(--blue)}
 .offres-layout{display:flex;flex-direction:column;gap:1.5rem}
 .offre-main{background:var(--bg2);border:1px solid var(--border2);border-radius:16px;padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;position:relative;overflow:hidden}
 .offre-main::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),rgba(91,141,248,.2))}
-.offre-sub-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.offre-sub-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .offre-sub{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem;display:flex;flex-direction:column;gap:.9rem}
 .offre-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:var(--blue-dim);border:1px solid rgba(91,141,248,.22);padding:.28rem .8rem;border-radius:100px;margin-bottom:.3rem}
 .offre-n{font-size:.68rem;font-weight:700;letter-spacing:.1em;color:var(--ink3)}
@@ -379,14 +379,14 @@ footer a:hover{color:var(--ink)}
     <div>
       <span class="label">Le vrai problème</span>
       <h2 class="prob-title" id="problem-title">Vous n'avez pas un problème de données.<br>Vous avez un problème de <em>direction</em>.</h2>
-      <div class="prob-box" role="note"><strong>Résultat :</strong> des outils bien installés mais sous-exploités, des prestataires qui livrent sans être challengés. Et des décisions qui se prennent encore à l'intuition.</div>
+      <div class="prob-box" role="note"><strong>Résultat :</strong> du budget marketing dépensé à l'aveugle, des outils payés mais sous-exploités, et des décisions qui se prennent encore à l'intuition.</div>
     </div>
     <ul class="prob-list" aria-label="Symptômes fréquents">
-      <li>Votre tracking est en place, mais personne ne garantit la fiabilité des données</li>
-      <li>Des tableaux de bord denses qui n'orientent pas vraiment l'action</li>
-      <li>Le server-side est sur la table, sans qu'on puisse trancher si ça vaut le coup</li>
-      <li>Des prestataires qui livrent des specs, mais personne pour challenger ce qu'ils livrent</li>
-      <li>Des équipes data et métier qui avancent en parallèle au lieu d'avancer ensemble</li>
+      <li>Vous payez des campagnes Google et Meta sans savoir lesquelles rapportent vraiment</li>
+      <li>GA4 est installé, mais personne dans l'équipe ne sait y trouver une réponse</li>
+      <li>Les leads ou les ventes du site ne correspondent pas à ce que remontent vos outils</li>
+      <li>Depuis le bandeau cookies, une partie de vos données a disparu sans explication</li>
+      <li>Votre agence vous envoie des rapports que personne n'est en mesure de challenger</li>
     </ul>
   </div>
 </section>
@@ -502,7 +502,7 @@ footer a:hover{color:var(--ink)}
         <li>Contrôle Consent Mode v2 et respect du refus</li>
         <li>Rapport lisible, priorisé, partageable en interne</li>
       </ul>
-      <div class="outil-cta" style="display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap"><a href="/trackmap.html" class="btn-p">Découvrir Trackmap →</a><a href="#contact" class="btn-g" data-subject="Pré-audit Trackmap">Demander un pré-audit</a></div>
+      <div class="outil-cta" style="display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap"><a href="/trackmap.html" class="btn-p">Découvrir Trackmap →</a><a href="#contact" class="btn-g" data-subject="Scan Trackmap (gratuit)">Demander un scan gratuit</a></div>
     </div>
     <div class="outil">
       <span class="outil-status">En cours</span>
@@ -520,52 +520,64 @@ footer a:hover{color:var(--ink)}
 <!-- OFFRES -->
 <section id="offres" aria-labelledby="offres-title">
   <span class="label">Offres</span>
-  <h2 id="offres-title">Comment travailler ensemble</h2>
+  <h2 id="offres-title">Trois étapes pour reprendre la main</h2>
   <div class="offres-layout">
     <div class="offre-main">
       <div>
         <div class="offre-badge">Le plus demandé</div>
-        <div class="offre-n">02</div>
-        <div class="offre-t">Tracking & Server-Side Audit</div>
-        <div class="offre-st">Avant d'investir, savoir si ça vaut le coup</div>
-        <p class="offre-d">Le server-side est souvent présenté comme une solution universelle. J'évalue objectivement sa pertinence pour votre contexte, identifie les cas d'usage qui se justifient réellement, et cadre la mise en œuvre avec rigueur, y compris le choix du bon partenaire d'implémentation.</p>
-        <div class="offre-action"><a href="#contact" class="btn-p">Démarrer ce diagnostic →</a></div>
+        <div class="offre-n">02 · Prix fixe</div>
+        <div class="offre-t">Audit mesure & conversions</div>
+        <div class="offre-st">Du clic publicitaire jusqu'au lead ou à la vente</div>
+        <p class="offre-d">Je vérifie que chaque étape de votre parcours est correctement mesurée : campagnes, site, formulaires, panier, CRM. Je localise les conversions perdues ou mal attribuées, je vous dis ce qu'elles vous coûtent, et je pilote les corrections avec votre agence ou votre équipe.</p>
+        <div class="offre-action"><a href="#contact" class="btn-p" data-subject="Audit mesure & conversions">Démarrer l'audit →</a></div>
       </div>
       <div>
         <ul class="offre-feats">
-          <li>Analyse complète de votre tracking existant</li>
-          <li>Lecture consentement & CMP</li>
-          <li>Identification des cas d'usage éligibles</li>
-          <li>Avis clair et documenté + schéma cible</li>
-          <li>Implémentation pilotée avec partenaire spécialisé</li>
+          <li>Contrôle GA4, GTM et bandeau cookies (Consent Mode v2)</li>
+          <li>Conversions Google Ads, Meta, LinkedIn : remontent-elles vraiment ?</li>
+          <li>Génération de leads ou e-commerce : localisation des pertes</li>
+          <li>Plan de corrections priorisé, avec qui fait quoi</li>
+          <li>Recette après correction : on vérifie que ça marche</li>
         </ul>
-        <div class="offre-ideal" style="margin-top:1.5rem">Idéal pour : équipes e-commerce qui veulent maximiser la qualité et la fiabilité de leur collecte.</div>
+        <div class="offre-ideal" style="margin-top:1.5rem">Idéal pour : PME qui investissent en acquisition et veulent savoir ce qui rapporte vraiment.</div>
       </div>
     </div>
     <div class="offre-sub-row">
       <div class="offre-sub">
-        <div class="offre-n">01</div>
-        <div class="offre-t">Performance diagnostic</div>
-        <div class="offre-st">Pour décider avant d'optimiser</div>
-        <p class="offre-d">Une analyse ciblée pour comprendre précisément où se crée et où se perd la valeur dans votre funnel digital. Vous repartez avec un diagnostic clair et un plan d'actions priorisé.</p>
+        <div class="offre-n">01 · Gratuit</div>
+        <div class="offre-t">Scan Trackmap</div>
+        <div class="offre-st">Pour savoir où vous en êtes</div>
+        <p class="offre-d">Je passe votre site dans Trackmap et je vous restitue l'essentiel en 30 minutes : ce qui tourne, ce qui fuit, ce qui ne respecte pas le consentement.</p>
         <ul class="offre-feats">
-          <li>Audit données & KPIs : fiabilité, pertinence, angles morts</li>
-          <li>Lecture funnel : localisation précise des pertes</li>
-          <li>3 leviers prioritaires + plan 30/60/90 jours</li>
+          <li>Cartographie des outils présents</li>
+          <li>Anomalies de consentement</li>
+          <li>3 priorités concrètes</li>
         </ul>
-        <div class="offre-ideal">Idéal pour : toute équipe qui veut savoir exactement où agir avant d'investir.</div>
+        <div class="offre-ideal"><a href="/trackmap.html" style="color:var(--blue);text-decoration:none">Découvrir Trackmap →</a></div>
       </div>
       <div class="offre-sub">
         <div class="offre-n">03</div>
-        <div class="offre-t">Data & performance retainer</div>
-        <div class="offre-st">Pour les équipes qui veulent avancer en continu</div>
-        <p class="offre-d">Un accompagnement régulier et structuré : je joue le rôle de votre référent data senior. Je cadre, je supervise, j'arbitre. Vous gardez la main. Je garde le cap.</p>
+        <div class="offre-t">Formation & autonomie</div>
+        <div class="offre-st">Pour que votre équipe se débrouille seule</div>
+        <p class="offre-d">Je forme votre équipe marketing sur vos propres données : trouver une réponse dans GA4, lire un rapport, construire un tableau de bord utile, vérifier qu'une campagne est bien mesurée.</p>
         <ul class="offre-feats">
-          <li>Supervision tracking & qualité de la collecte</li>
-          <li>Suivi et analyse des performances clés</li>
-          <li>Priorisation CRO et alignement des équipes</li>
+          <li>GA4, Looker Studio, GTM</li>
+          <li>Sessions pratiques sur vos comptes</li>
+          <li>Tableaux de bord prêts à l'emploi</li>
         </ul>
-        <div class="offre-ideal">Idéal pour : scale-ups et e-commerçants en croissance sans head of data en interne.</div>
+        <div class="offre-ideal">Idéal pour : équipes marketing de 1 à 10 personnes sans profil data.</div>
+      </div>
+      <div class="offre-sub">
+        <div class="offre-n">+</div>
+        <div class="offre-t">Accompagnement continu</div>
+        <div class="offre-st">Un référent data, sans le recruter</div>
+        <p class="offre-d">Quelques jours par mois, je joue le rôle de votre responsable data : suivi des performances, qualité de la mesure, arbitrages avec vos prestataires.</p>
+        <ul class="offre-feats">
+          <li>Point mensuel sur vos chiffres clés</li>
+          <li>Contrôle de la mesure en continu</li>
+          <li>Priorisation des actions marketing</li>
+        </ul>
+        <div class="offre-ideal">Idéal pour : PME en croissance sans responsable data en interne.</div>
       </div>
     </div>
   </div>
@@ -616,11 +628,10 @@ footer a:hover{color:var(--ink)}
         <div class="form-group"><label for="f-email">Email professionnel</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="vous@entreprise.fr"></div>
         <div class="form-group"><label for="f-subject">Sujet</label>
           <select id="f-subject" name="subject">
-            <option>Performance diagnostic</option>
-            <option>Tracking & Server-Side Audit</option>
-            <option>Data & performance retainer</option>
-            <option>Pré-audit Trackmap</option>
-            <option>Formation outils (GA4, GTM, Trackmap…)</option>
+            <option>Scan Trackmap (gratuit)</option>
+            <option>Audit mesure & conversions</option>
+            <option>Formation & autonomie (GA4, Looker Studio, GTM)</option>
+            <option>Accompagnement continu</option>
             <option selected>Autre demande</option>
           </select>
         </div>
