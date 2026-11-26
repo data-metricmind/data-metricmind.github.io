@@ -1,4 +1,4 @@
-/* Metricmind — bandeau cookies custom + Consent Mode v2 (partagé par toutes les pages).
+/* Metricmind - bandeau cookies custom + Consent Mode v2 (partagé par toutes les pages).
    Les défauts consent + GTM sont déclarés inline dans le <head> de chaque page. */
 (function(){
   var MAX_AGE=60*60*24*182; // ~6 mois

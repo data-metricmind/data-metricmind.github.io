@@ -132,7 +132,7 @@ offres = offres.replace('<span class="label">Offres</span>\n  <h2 id="offres-tit
 
 # ---------- Pages ----------
 page('index.html',
-     'Metricmind — Mesure des conversions pour les PME : votre site perd des conversions, je vous montre où',
+     'Mesure des conversions pour les PME | Metricmind',
      'Metricmind aide les PME à mesurer correctement leurs conversions : scan gratuit Trackmap, audit mesure & conversions, formation GA4 et Looker Studio.',
      '/',
      S('hero') + '\n' + S('problem') + '\n' + HOME_OFFRES + '\n' + HOME_PROOF + '\n' + S('temoignages') + '\n' +
@@ -140,7 +140,7 @@ page('index.html',
      extra_head=JSONLD)
 
 page('offres.html',
-     'Offres — Scan, audit mesure & conversions, formation | Metricmind',
+     'Offres PME : scan, audit des conversions, formation | Metricmind',
      'Scan Trackmap gratuit, audit mesure & conversions à prix fixe, formation GA4 et Looker Studio, accompagnement continu : les offres Metricmind pour les PME.',
      '/offres',
      page_head('Offres PME', 'Trois étapes pour reprendre la main sur vos conversions',
@@ -150,7 +150,7 @@ page('offres.html',
      extra_head=FAQ_LD)
 
 page('cas-clients.html',
-     'Études de cas & témoignages | Metricmind',
+     'Études de cas et témoignages | Metricmind',
      'Server-side, migration Adobe sur 40 pays, montée en compétences GA4, reporting BigQuery : des résultats concrets, pas des livrables.',
      '/cas-clients',
      page_head('Cas clients', 'Des résultats concrets, pas des livrables', 'Quelques missions représentatives, anonymisées, et ce qu’en disent ceux avec qui j’ai travaillé.') +
@@ -159,7 +159,7 @@ page('cas-clients.html',
      cta_band('Une situation <em>similaire ?</em>', 'Parlons-en. 30 minutes suffisent pour savoir si je peux vous aider.', 'cas_cta'))
 
 page('a-propos.html',
-     'À propos — Malick, consultant Data & Performance | Metricmind',
+     'À propos de Malick, consultant Data & Performance | Metricmind',
      "Consultant data senior depuis 2008, côté agence et annonceur. Tracking, server-side, GA4, Adobe, BigQuery : la technique au service des décisions.",
      '/a-propos',
      page_head('À propos', 'Quinze ans à faire parler les données, côté agence et côté annonceur',
@@ -169,7 +169,7 @@ page('a-propos.html',
      extra_head=PERSON_LD)
 
 page('contact.html',
-     'Contact — Parlons de votre situation | Metricmind',
+     'Contact | Metricmind',
      'Réservez un créneau de 30 minutes ou laissez un message : scan Trackmap, audit mesure & conversions, formation.',
      '/contact',
      re.sub(r'<h2 class="contact-title" id="contact-title">(.*?)</h2>', r'<h1 class="contact-title" id="contact-title">\1</h1>', S('contact'), flags=re.S), float_cta=False)
@@ -180,6 +180,6 @@ tm_css = open(os.path.join(SRC, 'trackmap.css'), encoding='utf-8').read()
 tm_faq = re.findall(r'<details><summary>(.*?)</summary><p>(.*?)</p></details>', tm, flags=re.S)
 TM_LD = '<script type="application/ld+json">\n' + __import__('json').dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":re.sub('<[^>]+>','',r)}} for q,r in tm_faq]}, ensure_ascii=False) + '\n</script>\n'
 page('trackmap.html',
-     'Trackmap — ce qui tourne vraiment sur votre site | Metricmind',
+     'Trackmap : ce qui tourne vraiment sur votre site | Metricmind',
      'Trackmap cartographie tous les outils de mesure, publicité et marketing qui se déclenchent sur votre site, avant et après le bandeau cookies, et détecte les anomalies RGPD.',
      '/trackmap', tm, page_style=tm_css, extra_head=TM_LD)

@@ -5,10 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mentions légales & confidentialité | Metricmind</title>
 <meta name="robots" content="noindex, follow">
-<link rel="canonical" href="https://metricmind.fr/mentions-legales.html">
+<link rel="canonical" href="https://metricmind.fr/mentions-legales">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- CONSENT MODE v2 - défauts AVANT GTM -->
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  var saved=null;
+  try{var m=document.cookie.match(/(?:^|; )mm_consent=([^;]+)/);if(m)saved=JSON.parse(decodeURIComponent(m[1]));}catch(e){saved=null;}
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+  gtag('set','ads_data_redaction',true);
+  if(saved&&typeof saved.a==='boolean'){
+    var mk=saved.m?'granted':'denied';
+    gtag('consent','update',{analytics_storage:saved.a?'granted':'denied',ad_storage:mk,ad_user_data:mk,ad_personalization:mk});
+  }
+  window.mmConsentSaved=saved;
+})();
+</script>
+<!-- GTM : renseigner l'ID ci-dessous (GTM-XXXXXXX = désactivé) -->
+<script>
+(function(w,d,s,l,i){if(!/^GTM-[A-Z0-9]+$/.test(i)||i==='GTM-XXXXXXX')return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');
+</script>
+
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#080808;color:#F2EFE9;line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -39,14 +60,14 @@ button{background:none;border:1px solid #323232;color:#F2EFE9;border-radius:100p
 <p>Le site <strong>metricmind.fr</strong> est édité par <strong>METRICMIND</strong>, société à responsabilité limitée au capital de 1 000 €.</p>
 <ul>
   <li>Siège social : 92270 Bois-Colombes, France</li>
-  <li>RCS Nanterre 938 770 435 — SIRET 938 770 435 00023</li>
+  <li>RCS Nanterre 938 770 435 - SIRET 938 770 435 00023</li>
   <li>N° de TVA intracommunautaire : FR28938770435</li>
   <li>Email : <a href="mailto:contact@metricmind.fr">contact@metricmind.fr</a></li>
   <li>Directeur de la publication : Papa Ba, gérant</li>
 </ul>
 
 <h2 id="hebergeur">Hébergement</h2>
-<p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis — <a href="https://github.com" rel="noopener">github.com</a>.</p>
+<p>GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis - <a href="https://github.com" rel="noopener">github.com</a>.</p>
 
 <h2 id="propriete">Propriété intellectuelle</h2>
 <p>L'ensemble des contenus de ce site (textes, logo, éléments graphiques) est la propriété de Metricmind, sauf mention contraire. Toute reproduction sans autorisation préalable est interdite.</p>
@@ -68,7 +89,7 @@ button{background:none;border:1px solid #323232;color:#F2EFE9;border-radius:100p
   <li><strong>Google Ireland Ltd</strong> : Google Tag Manager et Google Analytics, uniquement avec votre consentement.</li>
   <li><strong>Microsoft Ireland Operations Ltd</strong> : Microsoft Clarity, uniquement avec votre consentement.</li>
 </ul>
-<p>Certains de ces prestataires peuvent transférer des données hors de l'Union européenne. Ces transferts sont encadrés par le Data Privacy Framework UE–États-Unis ou par des clauses contractuelles types de la Commission européenne.</p>
+<p>Certains de ces prestataires peuvent transférer des données hors de l'Union européenne. Ces transferts sont encadrés par le Data Privacy Framework UE-États-Unis ou par des clauses contractuelles types de la Commission européenne.</p>
 <h3>Vos droits</h3>
 <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation et de portabilité de vos données. Pour les exercer : <a href="mailto:contact@metricmind.fr">contact@metricmind.fr</a>. Vous pouvez aussi introduire une réclamation auprès de la <a href="https://www.cnil.fr" rel="noopener">CNIL</a>.</p>
 
@@ -82,7 +103,8 @@ button{background:none;border:1px solid #323232;color:#F2EFE9;border-radius:100p
     <tr><td>_clck, _clsk</td><td>Microsoft Clarity : analyse de l'usage des pages</td><td>1 an / 1 jour</td></tr>
   </tbody>
 </table>
-<p><button type="button" onclick="document.cookie='mm_consent=;max-age=0;path=/';location.href='/'">Modifier mes choix de cookies</button></p>
+<p><button type="button" data-cc-open>Modifier mes choix de cookies</button></p>
 </main>
+<script src="/cc.js"></script>
 </body>
 </html>
