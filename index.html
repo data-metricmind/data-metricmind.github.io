@@ -260,25 +260,6 @@ footer a:hover{color:var(--ink)}
 .footer-links button{background:none;border:none;color:var(--ink3);font:inherit;cursor:pointer;padding:0}
 .footer-links button:hover{color:var(--ink)}
 
-/* COOKIE BANNER */
-.cc{position:fixed;left:1.2rem;bottom:1.2rem;z-index:200;max-width:440px;background:var(--bg3);border:1px solid var(--border2);border-radius:14px;padding:1.4rem 1.5rem;box-shadow:0 16px 48px rgba(0,0,0,.55);display:none}
-.cc.show{display:block}
-.cc-t{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:.5rem}
-.cc-d{font-size:.8rem;color:var(--ink2);line-height:1.6;margin-bottom:1rem}
-.cc-d a{color:var(--ink)}
-.cc-btns{display:flex;gap:.6rem;flex-wrap:wrap}
-.cc-btn{flex:1 1 auto;font-family:var(--sans);font-size:.78rem;font-weight:700;padding:.6rem 1rem;border-radius:100px;cursor:pointer;border:1px solid var(--border2);background:var(--bg2);color:var(--ink)}
-.cc-btn:hover{border-color:var(--ink3)}
-.cc-btn.link{flex:0 0 auto;background:none;border-color:transparent;color:var(--ink2);text-decoration:underline;padding-left:.4rem;padding-right:.4rem}
-.cc-prefs{display:none;margin:0 0 1rem;border-top:1px solid var(--border);padding-top:.8rem}
-.cc.custom .cc-prefs{display:block}
-.cc-opt{display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;padding:.55rem 0;font-size:.8rem;color:var(--ink2)}
-.cc-opt strong{display:block;color:var(--ink);font-size:.82rem}
-.cc-opt input{margin-top:.2rem;width:18px;height:18px;accent-color:var(--blue);flex-shrink:0}
-.cc-save{display:none}
-.cc.custom .cc-save{display:block}
-.cc.custom .cc-custom-btn{display:none}
-
 /* RESPONSIVE */
 .float-cta{opacity:0;pointer-events:none;transition:transform .2s,box-shadow .2s,opacity .3s}
 .float-cta.visible{opacity:1;pointer-events:auto}
@@ -291,9 +272,7 @@ footer a:hover{color:var(--ink)}
   .hero-stats{gap:1.8rem;justify-content:center;text-align:center}
   .float-cta.visible{bottom:1.2rem;right:1.2rem}
   .outils-grid,.form-row{grid-template-columns:1fr}
-  .cc{left:.8rem;right:.8rem;bottom:.8rem;max-width:none}
 }
-body.cc-open .float-cta{display:none}
 </style>
 </head>
 <body>
@@ -511,14 +490,14 @@ body.cc-open .float-cta{display:none}
   <div class="outils-grid">
     <div class="outil featured">
       <span class="outil-status live">Disponible</span>
-      <div class="outil-t">TrackMap</div>
+      <div class="outil-t">Trackmap</div>
       <p class="outil-d">La cartographie complète de ce qui se déclenche réellement sur votre site, à partir d'une simple capture réseau : tags, requêtes, traceurs, avant choix, après refus et après acceptation du bandeau cookies.</p>
       <ul class="offre-feats">
         <li>Inventaire des outils et des destinations de données</li>
         <li>Contrôle Consent Mode v2 et respect du refus</li>
         <li>Rapport lisible, priorisé, partageable en interne</li>
       </ul>
-      <div class="outil-cta"><a href="#contact" class="btn-p" data-subject="Pré-audit TrackMap">Demander un pré-audit →</a></div>
+      <div class="outil-cta" style="display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap"><a href="/trackmap.html" class="btn-p">Découvrir Trackmap →</a><a href="#contact" class="btn-g" data-subject="Pré-audit Trackmap">Demander un pré-audit</a></div>
     </div>
     <div class="outil">
       <span class="outil-status">En cours</span>
@@ -635,7 +614,8 @@ body.cc-open .float-cta{display:none}
             <option>Performance diagnostic</option>
             <option>Tracking & Server-Side Audit</option>
             <option>Data & performance retainer</option>
-            <option>Pré-audit TrackMap</option>
+            <option>Pré-audit Trackmap</option>
+            <option>Formation outils (GA4, GTM, Trackmap…)</option>
             <option selected>Autre demande</option>
           </select>
         </div>
@@ -668,26 +648,10 @@ body.cc-open .float-cta{display:none}
   <span>© <span id="year">2026</span> Metricmind. Tous droits réservés.</span>
   <span class="footer-links">
     <a href="/mentions-legales.html">Mentions légales & confidentialité</a>
-    <button type="button" id="cc-reopen">Gérer les cookies</button>
+    <button type="button" data-cc-open>Gérer les cookies</button>
     <a href="mailto:contact@metricmind.fr">contact@metricmind.fr</a>
   </span>
 </footer>
-
-<!-- BANDEAU COOKIES (custom, Consent Mode v2) -->
-<div class="cc" id="cc" role="dialog" aria-modal="false" aria-labelledby="cc-title" aria-describedby="cc-desc">
-  <div class="cc-t" id="cc-title">Vos choix de cookies</div>
-  <p class="cc-d" id="cc-desc">J'utilise des cookies de mesure d'audience pour comprendre comment le site est utilisé et l'améliorer. Rien n'est déposé sans votre accord, et vous pouvez changer d'avis à tout moment. <a href="/mentions-legales.html#cookies">Détails</a></p>
-  <div class="cc-prefs" id="cc-prefs">
-    <label class="cc-opt"><span><strong>Mesure d'audience</strong>Statistiques de visite et d'usage (Google Analytics, Microsoft Clarity).</span><input type="checkbox" id="cc-a"></label>
-    <label class="cc-opt"><span><strong>Marketing</strong>Mesure des campagnes publicitaires (Google Ads, LinkedIn).</span><input type="checkbox" id="cc-m"></label>
-  </div>
-  <div class="cc-btns">
-    <button type="button" class="cc-btn" data-cc="refuse">Tout refuser</button>
-    <button type="button" class="cc-btn" data-cc="accept">Tout accepter</button>
-    <button type="button" class="cc-btn cc-save" data-cc="save">Enregistrer</button>
-    <button type="button" class="cc-btn link cc-custom-btn" data-cc="custom">Personnaliser</button>
-  </div>
-</div>
 
 <script>
 function toggleCas(el,ev){
@@ -733,38 +697,6 @@ window.addEventListener('scroll',()=>{
 
 document.getElementById('year').textContent=new Date().getFullYear();
 
-/* ---------- BANDEAU COOKIES / CONSENT MODE v2 ---------- */
-(function(){
-  var cc=document.getElementById('cc'),ca=document.getElementById('cc-a'),cm=document.getElementById('cc-m');
-  var MAX_AGE=60*60*24*182; // ~6 mois
-  function open(custom){
-    var s=window.mmConsentSaved;
-    ca.checked=!!(s&&s.a);cm.checked=!!(s&&s.m);
-    cc.classList.toggle('custom',!!custom);
-    cc.classList.add('show');document.body.classList.add('cc-open');
-    if(custom){var b=cc.querySelector('#cc-a');if(b)b.focus({preventScroll:true});}
-  }
-  function close(){cc.classList.remove('show','custom');document.body.classList.remove('cc-open');}
-  function apply(a,m){
-    var v={a:!!a,m:!!m,v:1,ts:Date.now()};
-    document.cookie='mm_consent='+encodeURIComponent(JSON.stringify(v))+';max-age='+MAX_AGE+';path=/;SameSite=Lax'+(location.protocol==='https:'?';Secure':'');
-    window.mmConsentSaved=v;
-    var mk=m?'granted':'denied';
-    gtag('consent','update',{analytics_storage:a?'granted':'denied',ad_storage:mk,ad_user_data:mk,ad_personalization:mk});
-    dataLayer.push({event:'consent_update',consent_analytics:a?'granted':'denied',consent_marketing:mk});
-    close();
-  }
-  cc.addEventListener('click',function(e){
-    var act=e.target.getAttribute&&e.target.getAttribute('data-cc');if(!act)return;
-    if(act==='accept')apply(true,true);
-    else if(act==='refuse')apply(false,false);
-    else if(act==='save')apply(ca.checked,cm.checked);
-    else if(act==='custom')open(true);
-  });
-  document.getElementById('cc-reopen').addEventListener('click',function(){open(true);});
-  if(!window.mmConsentSaved)open(false);
-})();
-
 /* ---------- SUIVI DES CONTACTS ---------- */
 document.getElementById('calendly-link').addEventListener('click',function(){
   dataLayer.push({event:'generate_lead',lead_method:'calendly'});
@@ -776,6 +708,9 @@ document.querySelectorAll('[data-contact]').forEach(function(a){
 document.querySelectorAll('[data-subject]').forEach(function(a){
   a.addEventListener('click',function(){var s=document.getElementById('f-subject');if(s)s.value=a.getAttribute('data-subject');});
 });
+
+(function(){var q=new URLSearchParams(location.search).get('sujet'),sel=document.getElementById('f-subject');
+  if(q&&sel){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text.toLowerCase().indexOf(q.toLowerCase())===0){sel.selectedIndex=i;break;}}}})();
 
 /* ---------- FORMULAIRE (Web3Forms) ---------- */
 (function(){
@@ -803,5 +738,6 @@ document.querySelectorAll('[data-subject]').forEach(function(a){
   });
 })();
 </script>
+<script src="/cc.js"></script>
 </body>
 </html>
