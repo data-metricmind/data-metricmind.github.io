@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trackmap — ce qui tourne vraiment sur votre site | Metricmind</title>
 <meta name="description" content="Trackmap cartographie tous les outils de mesure, publicité et marketing qui se déclenchent sur votre site, avant et après le bandeau cookies, et détecte les anomalies RGPD.">
-<link rel="canonical" href="https://metricmind.fr/trackmap.html">
+<link rel="canonical" href="https://metricmind.fr/trackmap">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#080808">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Metricmind">
-<meta property="og:url" content="https://metricmind.fr/trackmap.html">
-<meta property="og:title" content="Trackmap — ce qui tourne vraiment sur votre site">
-<meta property="og:description" content="Cartographie des tags et traceurs, avant et après le bandeau cookies. Anomalies RGPD, Consent Mode v2, setup server-side.">
+<meta property="og:url" content="https://metricmind.fr/trackmap">
+<meta property="og:title" content="Trackmap — ce qui tourne vraiment sur votre site | Metricmind">
+<meta property="og:description" content="Trackmap cartographie tous les outils de mesure, publicité et marketing qui se déclenchent sur votre site, avant et après le bandeau cookies, et détecte les anomalies RGPD.">
 <meta name="twitter:card" content="summary">
 <!-- CONSENT MODE v2 — défauts AVANT GTM -->
 <script>
@@ -35,28 +35,10 @@ function gtag(){dataLayer.push(arguments);}
 <script>
 (function(w,d,s,l,i){if(!/^GTM-[A-Z0-9]+$/.test(i)||i==='GTM-XXXXXXX')return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');
 </script>
+<link rel="stylesheet" href="/assets/site.css">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#080808;--bg2:#101010;--bg3:#161616;--border:#272727;--border2:#323232;--ink:#F2EFE9;--ink2:#B8B3AA;--ink3:#928E87;--blue:#5B8DF8;--blue-dim:rgba(91,141,248,.10);--blue-glow:rgba(91,141,248,.28);--mint:#00A882;--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,8,8,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:60px}
-.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ink);font-weight:700;letter-spacing:.14em;font-size:.78rem}
-.brand img{width:26px;height:26px}
-.brand span{color:var(--ink3);font-weight:600;letter-spacing:.06em}
-.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{font-size:.82rem;color:var(--ink2);text-decoration:none}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{background:var(--blue);color:var(--bg)!important;padding:.4rem 1.1rem;border-radius:100px;font-weight:600}
 section{padding:90px 5%}
-.label{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.2rem;display:block}
-h2{font-family:var(--serif);font-size:clamp(1.7rem,3.5vw,2.6rem);line-height:1.1;margin-bottom:1.2rem}
 .intro{color:var(--ink2);max-width:640px;font-size:.95rem;line-height:1.75;margin-bottom:2.5rem}
-.btn-p{background:var(--blue);color:var(--bg);padding:.85rem 2rem;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;display:inline-block;box-shadow:0 4px 20px var(--blue-glow);transition:transform .2s}
-.btn-p:hover{transform:translateY(-2px)}
-.btn-g{color:var(--ink2);font-size:.88rem;text-decoration:none;padding:.85rem 0}
-.btn-g:hover{color:var(--ink)}
 /* hero */
 #hero{min-height:92vh;display:flex;align-items:center;padding:120px 5% 70px;position:relative;overflow:hidden}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 70% 45%,rgba(0,168,130,.08) 0%,transparent 70%);pointer-events:none}
@@ -126,26 +108,45 @@ details p{margin-top:.8rem;font-size:.87rem;color:var(--ink2);line-height:1.7}
 #cta{text-align:center;padding:110px 5%}
 #cta h2 em{font-style:italic;color:var(--blue)}
 #cta p{color:var(--ink2);max-width:540px;margin:0 auto 2rem}
-footer{background:var(--bg2);border-top:1px solid var(--border);color:var(--ink3);padding:1.8rem 5%;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.78rem}
-footer a,footer button{color:var(--ink3);text-decoration:none;background:none;border:none;font:inherit;cursor:pointer}
-footer a:hover,footer button:hover{color:var(--ink)}
-.fl{display:flex;gap:1.2rem;flex-wrap:wrap}
 @media(max-width:900px){
-  .nav-links li:not(:last-child){display:none}
   .hero-in,.steps,.feats,.aud,.formats{grid-template-columns:1fr}
   .hero-in{gap:3rem}
 }
+#hero{min-height:92vh;display:flex;align-items:center;padding:120px 5% 70px}
+
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="brand"><img src="/favicon.svg" alt="">METRICMIND <span>/ Trackmap</span></a>
-  <ul class="nav-links">
-    <li><a href="#methode">Comment ça marche</a></li>
-    <li><a href="#pour-qui">Pour qui</a></li>
-    <li><a href="#formats">Formats</a></li>
-    <li><a href="/?sujet=Scan#contact" class="nav-cta" data-lead="nav">Demander un scan gratuit</a></li>
+  <a href="/" class="nav-logo" aria-label="Accueil Metricmind">
+    <svg width="176" height="32" viewBox="0 0 176 32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Metricmind">
+      <defs>
+        <linearGradient id="mlg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#B5AAEE"/>
+          <stop offset="100%" stop-color="#7264CE"/>
+        </linearGradient>
+      </defs>
+      <g transform="translate(16,16)">
+        <g transform="rotate(0)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+        <g transform="rotate(60)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+        <g transform="rotate(120)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+        <g transform="rotate(180)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+        <g transform="rotate(240)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+        <g transform="rotate(300)"><circle cx="-3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="-3.5" y1="-12" x2="-.4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/><circle cx="3.5" cy="-12" r="1.6" fill="url(#mlg)"/><line x1="3.5" y1="-12" x2=".4" y2="-6.5" stroke="url(#mlg)" stroke-width="2" stroke-linecap="round"/></g>
+      </g>
+      <line x1="38" y1="7" x2="38" y2="25" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+      <text x="46" y="21" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700" letter-spacing="2.5" fill="white">METRICMIND</text>
+    </svg>
+  </a>
+
+  <button class="nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" aria-label="Navigation principale">
+    <li><a href="/offres">Offres</a></li>
+    <li><a href="/trackmap">Trackmap</a></li>
+    <li><a href="/cas-clients">Cas clients</a></li>
+    <li><a href="/a-propos">À propos</a></li>
+    <li><a href="/contact" class="nav-cta">Parlons-en</a></li>
   </ul>
 </nav>
 
@@ -157,7 +158,7 @@ footer a:hover,footer button:hover{color:var(--ink)}
       <h1>Ce qui tourne <em>vraiment</em> sur votre site.<br>Avant et après le bandeau cookies.</h1>
       <p class="sub">Trackmap cartographie tous les outils qui se déclenchent sur votre site (mesure d'audience, publicité, CRM, CRO, chat) à partir de ses requêtes réseau. Il repère ceux qui partent avant le consentement, vérifie votre Consent Mode v2 et identifie votre setup technique.</p>
       <div class="actions">
-        <a href="/?sujet=Scan#contact" class="btn-p" data-lead="hero">Demander un scan gratuit →</a>
+        <a href="/contact?sujet=Scan" class="btn-p" data-lead="trackmap_hero">Demander un scan gratuit →</a>
         <a href="#methode" class="btn-g">Comment ça marche ↓</a>
       </div>
     </div>
@@ -226,13 +227,13 @@ footer a:hover,footer button:hover{color:var(--ink)}
       <h3>Scan Trackmap</h3>
       <p>Je passe votre site dans Trackmap sur ses pages clés et je vous restitue l'essentiel en 30 minutes, sans engagement.</p>
       <ul><li>Cartographie et anomalies principales</li><li>Lecture du Consent Mode v2</li><li>3 priorités concrètes</li></ul>
-      <div class="go"><a href="/?sujet=Scan#contact" class="btn-p" data-lead="format_preaudit">Demander un scan gratuit →</a></div>
+      <div class="go"><a href="/contact?sujet=Scan" class="btn-p" data-lead="trackmap_format_preaudit">Demander un scan gratuit →</a></div>
     </div>
     <div class="fmt">
       <span class="badge">Pour aller au fond</span>
       <h3>Audit mesure & conversions</h3>
       <p>Trackmap comme point de départ d'un audit complet : du clic publicitaire jusqu'au lead ou à la vente, localisation des conversions perdues et pilotage des corrections.</p>
-      <div class="go"><a href="/#offres" class="btn-g">Voir l'offre →</a></div>
+      <div class="go"><a href="/offres" class="btn-g">Voir l'offre →</a></div>
     </div>
   </div>
 </section>
@@ -251,20 +252,37 @@ footer a:hover,footer button:hover{color:var(--ink)}
 <section id="cta">
   <h2>Et sur <em>votre</em> site, qu'est-ce qui tourne ?</h2>
   <p>Envoyez-moi l'adresse de votre site. Je vous dis ce que Trackmap y trouve.</p>
-  <a href="/?sujet=Scan#contact" class="btn-p" data-lead="footer_cta">Demander un scan gratuit →</a>
+  <a href="/contact?sujet=Scan" class="btn-p" data-lead="trackmap_footer_cta">Demander un scan gratuit →</a>
 </section>
 
+<a href="/contact" class="float-cta" aria-label="Prendre contact">Parlons-en →</a>
 <footer>
-  <span>© <span id="year">2026</span> Metricmind · Trackmap</span>
-  <span class="fl"><a href="/">Metricmind</a><a href="/mentions-legales.html">Mentions légales & confidentialité</a><button type="button" data-cc-open>Gérer les cookies</button></span>
+  <span class="f-logo">
+    <svg width="120" height="22" viewBox="0 0 120 22" xmlns="http://www.w3.org/2000/svg" aria-label="Metricmind">
+      <defs><linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#B5AAEE"/><stop offset="100%" stop-color="#7264CE"/></linearGradient></defs>
+      <g transform="translate(11,11)">
+        <g transform="rotate(0)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+        <g transform="rotate(60)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+        <g transform="rotate(120)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+        <g transform="rotate(180)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+        <g transform="rotate(240)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+        <g transform="rotate(300)"><circle cx="-2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="-2.5" y1="-8.5" x2="-.3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/><circle cx="2.5" cy="-8.5" r="1.1" fill="url(#flg)"/><line x1="2.5" y1="-8.5" x2=".3" y2="-4.5" stroke="url(#flg)" stroke-width="1.4" stroke-linecap="round"/></g>
+      </g>
+      <line x1="26" y1="5" x2="26" y2="17" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+      <text x="32" y="15" font-family="-apple-system,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2" fill="white">METRICMIND</text>
+    </svg>
+  </span>
+  <span>© <span id="year">2026</span> Metricmind. Tous droits réservés.</span>
+  <span class="footer-links">
+    <a href="/offres">Offres</a>
+    <a href="/trackmap">Trackmap</a>
+    <a href="/mentions-legales">Mentions légales</a>
+    <button type="button" data-cc-open>Gérer les cookies</button>
+    <a href="mailto:contact@metricmind.fr">contact@metricmind.fr</a>
+  </span>
 </footer>
 
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-document.querySelectorAll('[data-lead]').forEach(function(a){
-  a.addEventListener('click',function(){dataLayer.push({event:'cta_click',cta_location:'trackmap_'+a.getAttribute('data-lead')});});
-});
-</script>
+<script src="/assets/site.js"></script>
 <script src="/cc.js"></script>
 </body>
 </html>
