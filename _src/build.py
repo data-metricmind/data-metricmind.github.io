@@ -105,8 +105,8 @@ HOME_OFFRES = '''<section id="offres-home" aria-labelledby="ho-title">
   <h2 id="ho-title">Trois étapes pour reprendre la main</h2>
   <div class="home-offres">
     <a href="/trackmap" class="ho"><span class="ho-n">01 · Gratuit</span><span class="ho-t">Scan Trackmap</span><span class="ho-d">Ce qui tourne vraiment sur votre site, ce qui fuit, ce qui ne respecte pas le consentement. Restitution en 30 minutes.</span><span class="ho-go">Découvrir Trackmap →</span></a>
-    <a href="/offres" class="ho main"><span class="ho-n">02 · Prix fixe</span><span class="ho-t">Audit mesure & conversions</span><span class="ho-d">Du clic publicitaire jusqu'au lead ou à la vente : je localise les conversions perdues et je pilote les corrections.</span><span class="ho-go">Voir l'offre →</span></a>
-    <a href="/offres" class="ho"><span class="ho-n">03</span><span class="ho-t">Formation & autonomie</span><span class="ho-d">Votre équipe marketing apprend à trouver ses réponses dans GA4 et à construire des tableaux de bord utiles.</span><span class="ho-go">Voir l'offre →</span></a>
+    <a href="/offres#audit" class="ho main"><span class="ho-n">02 · Prix fixe</span><span class="ho-t">Audit mesure & conversions</span><span class="ho-d">Du clic publicitaire jusqu'au lead ou à la vente : je localise les conversions perdues et je pilote les corrections.</span><span class="ho-go">Voir l'offre →</span></a>
+    <a href="/offres#formation" class="ho"><span class="ho-n">03</span><span class="ho-t">Formation & autonomie</span><span class="ho-d">Votre équipe marketing apprend à trouver ses réponses dans GA4 et à construire des tableaux de bord utiles.</span><span class="ho-go">Voir l'offre →</span></a>
   </div>
 </section>
 '''
@@ -130,6 +130,14 @@ offres = offres.replace('<div class="offre-ideal">Idéal pour : PME en croissanc
                         '<div class="offre-ideal">Idéal pour : PME en croissance sans responsable data en interne.</div>\n        <a href="/contact?sujet=Accompagnement" class="cas-cta-link" data-lead="offres_accompagnement">En parler →</a>')
 offres = offres.replace('<span class="label">Offres</span>\n  <h2 id="offres-title">Trois étapes pour reprendre la main</h2>\n', '<h2 id="offres-title" class="sr-only">Les offres</h2>\n')
 
+OFFRES_NAV = '''<div class="offres-nav" role="navigation" aria-label="Sommaire des offres">
+  <a href="#scan"><span>01</span> Scan Trackmap</a>
+  <a href="#audit"><span>02</span> Audit mesure & conversions</a>
+  <a href="#formation"><span>03</span> Formation & autonomie</a>
+  <a href="#accompagnement"><span>04</span> Accompagnement continu</a>
+</div>
+'''
+
 # ---------- Pages ----------
 page('index.html',
      'Mesure des conversions pour les PME | Metricmind',
@@ -145,6 +153,7 @@ page('offres.html',
      '/offres',
      page_head('Offres PME', 'Trois étapes pour reprendre la main sur vos conversions',
                "Des offres pensées pour les PME qui investissent en acquisition. On commence par un état des lieux gratuit, on corrige ce qui fuit, puis votre équipe apprend à s'en servir seule.") +
+     OFFRES_NAV +
      '\n' + offres + '\n' + S('expertises') + '\n' + FAQ_HTML + '\n' +
      cta_band('Vous ne savez pas par où <em>commencer ?</em>', 'Commencez par le scan gratuit : on saura en 30 minutes ce qui mérite votre attention.', 'offres_cta'),
      extra_head=FAQ_LD)

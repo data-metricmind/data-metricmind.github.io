@@ -293,3 +293,11 @@ details p{margin-top:.8rem;font-size:.87rem;color:var(--ink2);line-height:1.7}
 .partner-dot{width:7px;height:7px;border-radius:50%;background:#00A882}
 .certifs{margin-top:.9rem;font-size:.84rem;color:var(--ink3)}
 .certifs strong{color:var(--ink2);font-weight:600}
+
+/* Maillage offres */
+.offres-nav{display:flex;flex-wrap:wrap;gap:.6rem;padding:1.6rem 5% 0}
+.offres-nav a{font-size:.82rem;color:var(--ink2);text-decoration:none;border:1px solid var(--border2);border-radius:100px;padding:.5rem 1rem;background:var(--bg2)}
+.offres-nav a:hover{color:var(--ink);border-color:var(--blue)}
+.offres-nav a span{color:var(--blue);font-weight:700;margin-right:.3rem}
+#scan,#audit,#formation,#accompagnement{scroll-margin-top:90px}
+.offre-main:target,.offre-sub:target{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 10px 40px rgba(91,141,248,.18)}
