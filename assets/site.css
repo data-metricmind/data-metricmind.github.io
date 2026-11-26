@@ -291,3 +291,5 @@ details p{margin-top:.8rem;font-size:.87rem;color:var(--ink2);line-height:1.7}
 .partner{display:inline-flex;align-items:center;line-height:1.45;text-align:left;gap:.6rem;font-size:.85rem;color:var(--ink2);border:1px solid var(--border2);border-radius:100px;padding:.45rem 1.1rem;background:var(--bg)}
 .partner strong{color:var(--ink)}
 .partner-dot{width:7px;height:7px;border-radius:50%;background:#00A882}
+.certifs{margin-top:.9rem;font-size:.84rem;color:var(--ink3)}
+.certifs strong{color:var(--ink2);font-weight:600}
