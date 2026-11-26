@@ -9,7 +9,9 @@ Offres pour les PME, en trois étapes :
 3. Formation & autonomie : formation des équipes marketing à GA4, Looker Studio et Google Tag Manager sur leurs propres données.
 En option : accompagnement continu, rôle de référent data à temps partagé.
 
-Expertise : Google Analytics 4, Google Tag Manager, tracking server-side (sGTM, Addingwell, Stape), Consent Mode v2, Adobe Analytics, Piano Analytics, BigQuery, dbt, Looker Studio, Optimizely, Microsoft Clarity.
+Expertise : Google Analytics 4, Google Tag Manager, tracking server-side (sGTM, Addingwell, Stape ; partenaire Addingwell), Shopify, Consent Mode v2, Adobe Analytics, Piano Analytics, BigQuery, dbt, Looker Studio, Optimizely, Microsoft Clarity.
+
+Références : BNP Paribas, Humanis, Radiance, MACSF, Betclic, Fédération Française de Football (en direct ou via agence).
 
 Résultats représentatifs : +15 % de conversions visibles grâce au server-side pour un e-commerce présent dans 10 pays ; migration Adobe Analytics déployée dans 40 pays.
 
